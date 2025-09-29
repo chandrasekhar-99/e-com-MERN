@@ -1,0 +1,20 @@
+.stat-container{
+    background-color: #f8df8c;
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.stat-data-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stat-data-value{
+    text-align: left;
+}
+
+.stat-data{
+    font-weight: 500;
+}
