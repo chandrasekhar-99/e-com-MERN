@@ -29,7 +29,6 @@ const BarChart = (props)=> {
               throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            console.log(data);
             setBarDataTransaction(data);
           } catch (error) {
             setError(error.message);
@@ -48,8 +47,6 @@ const BarChart = (props)=> {
     const barStatData = barDataTransaction.barChartData;
     
     const bar = barStatData.salesByPriceRange;
-
-    console.log(bar);
 
     const chartData = {
       labels: bar.map(item => item.range),

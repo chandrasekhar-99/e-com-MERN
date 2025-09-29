@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import 'chart.js/auto';
 import { Pie } from 'react-chartjs-2';
 
@@ -10,7 +10,6 @@ const PieChart = (props)=> {
     const [error, setError] = useState(null);
     const {setMonth} = props
 
-    console.log(typeof(pieDataTransaction));
   
 
 
