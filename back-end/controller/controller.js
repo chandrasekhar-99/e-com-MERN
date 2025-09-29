@@ -1,6 +1,8 @@
 const roxColl = require('../model/transaction')
-
+const dotenv = require('dotenv')
 const axios = require('axios');
+
+dotenv.config();
 
 
 //initialize DB
@@ -305,9 +307,9 @@ const roxApi = async (req,res)=> {
     const {month} = req.query;
     try{
         const [statistics, barData, pieData] = await Promise.all([
-            axios.get(`http://localhost:8000/api/statistics?month=${month}`),
-            axios.get(`http://localhost:8000/api/bar-chart?month=${month}`),
-            axios.get(`http://localhost:8000/api/pie-chart?month=${month}`)
+            axios.get(`${process.env.API_URL}/api/statistics?month=${month}`),
+            axios.get(`${process.env.API_URL}/api/bar-chart?month=${month}`),
+            axios.get(`${process.env.API_URL}/api/pie-chart?month=${month}`)
         ]);
 
         const combinedData = {
